@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+#header {
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.item_logo {
+    display: flex;
+    justify-content: center;
+
+    width: 50%;
+    height: 100px;
+}
+
+.item_logo .logo {
+
+    width: 13%;
+    height: 100%;
+    background-image: url("chrome://branding/content/about-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
+    background-size: contain;
+}
+
+.item_logo .watermark {
+    width: 30%;
+
+    background-image: url("chrome://branding/content/firefox-wordmark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
+  background-size: contain;
+
+
+}
+
+.search {
+    flex-grow: 1;
+
+
+}
+
+.search input {
+    padding: .5rem;
+}
+
+.search input[type="text"] {
+    width: 50vw;
+}
+
+#visited_sites {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #000000;
+}
+
+.visited {
+
+    width: 60vw;
+    display: flex;
+    justify-content: center !important;
+    padding: 0.5rem;
+    background-color: brown;
+    gap: 2vw;
+
+}
+
+.item_visted {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vh;
+    height: 15vh;
+    background-color: black;
+
+    border-radius: 4px;
+}
+
+.border_item {
+
+    height: 70%;
+    width: 70%;
+    background-color: aqua;
+    padding: .7rem;
+    border-radius: 4px;
+}
+
+.title {
+    height: auto;
+    font-size: .7em;
+    color: white;
+    text-align: center;
+}
+
+.setting {
+    visibility: hidden;
+    width: 90%;
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+
+.item_visted:hover .setting {
+    visibility: visible;
+}
+
+.item_visted:hover {
+    background-color: gray;
+}
+
+.image_div {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://contile-images.services.mozilla.com/obgoOYObjIFea_bXuT6L4LbBJ8j425AD87S1HMD3BWg.9991.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+    border-radius: 4px;
+}
+
+.pocket_container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 20px; 
+    max-width: 70%;
+    height: 50vh;
+    margin: 0 auto;
+
+}
+
+.pocket_item
+{
+    position: relative;
+    height: 40vh;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 18px;
+    
+    text-align: center;
+    border-radius: 8px;
+    
+}
+
+.setting_pocket_item1
+{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 2%;
+}
+
+.item1:hover .setting_pocket_item1
+{
+visibility: visible;
+}
+
+.pocket_item:hover
+{
+    border: 2px solid greenyellow;
+}
+/* hi */
+
+.pocket_container  .pocket_item img
+{
+    width: 100%;
+    height:50% ;
+    border-radius: 8px 8px 0 0;
+}
+.pocket_headings_container
+{
+padding: 10px 10px;
+}
+
+.pocket_headings
+{
+display: flex;
+flex-direction: column;
+text-align: left;
+}
+@media only screen and (max-width: 768px) {
+
+    .visited {
+        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        width: 80vw;
+        flex-wrap: wrap;
+        grid-area: 1vw;
+    }
+
+    .item_visted {
+        width: 14vh !important;
+    }
+    .item_logo .logo {
+        width:40%;
+    }
+    .item_logo .watermark {
+        width: 60%;
+    }
+
+    .pocket_container
+    {
+        grid-template-columns: repeat(1, 1fr); 
+        max-width: 90%;
+        height: 50vh;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* CSS styles for medium-sized screens */
+}
+
+@media only screen and (min-width: 1025px) {
+    /* CSS styles for larger screens */
+}
